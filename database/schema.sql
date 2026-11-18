@@ -1,0 +1,13 @@
+
+CREATE DATABASE IF NOT EXISTS game_lat_the
+CHARACTER SET utf8mb4
+COLLATE utf8mb4_unicode_ci;
+
+USE game_lat_the;
+
+CREATE TABLE IF NOT EXISTS users (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password_hash VARCHAR(60) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
